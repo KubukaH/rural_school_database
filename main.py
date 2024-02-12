@@ -69,7 +69,7 @@ class App(tk.Tk):
     self.school_name = tk.StringVar()
     make_styles(self)
 
-    with open(relpath("db/db_names.txt"), 'r') as f:
+    with open(relpath("data_base/db_names.txt"), 'r') as f:
       sch = f.read()
       self.school_name.set(sch)
 
