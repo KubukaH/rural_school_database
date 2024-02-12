@@ -39,7 +39,7 @@ class school_name(Frame):
     sch_name = self.ent1.get()
     sc_typ = self.school_value.get()
     if sch_name != '' and sc_typ != '':
-      with open(os.path.relpath("db/db_names.txt"), 'w') as f:
+      with open(os.path.relpath("data_base/db_names.txt"), 'w') as f:
         f.write(f"{sch_name.capitalize()} {sc_typ.capitalize()}")
         create_db(sch_name.lower())
         self.ent1.delete(0, 'end')
