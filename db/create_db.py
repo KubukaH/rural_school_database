@@ -52,16 +52,19 @@ def create_db(name):
       );
       CREATE TABLE IF NOT EXISTS students(
         school_id PRIMARY KEY UNIQUE,
-        names TEXT,
-        date_of_birth TEXT,
-        entry_number TEXT,
+        last_name TEXT,
+        first_name TEXT,
+        added_names TEXT,
         gender TEXT,
-        address TEXT,
-        class TEXT,
+        date_of_birth TEXT,
+        birth_entry_number TEXT,
+        permanent_address TEXT,
+        current_address TEXT,
+        other_details TEXT,
         parent_names TEXT,
         parent_phone_number TEXT,
+        student_class TEXT,
         sports TEXT,
-        other_details TEXT,
         created TIMESTAMP,
         last_updated TIMESTAMP
       );

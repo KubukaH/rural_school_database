@@ -65,7 +65,7 @@ class signup_frame(Frame):
     self.login_btn.grid(row=9, column=1, sticky='e', pady=4)
 
   def save(self):
-    mode = create_account(db_name="chinonge", user_id=hashed_id(secrets.token_bytes(24)), user_name=self.entry_1.get().encode('utf-8'), password=self.entry_2.get().encode('utf-8'), roles=self.entry_3.get().encode('utf-8'), name=self.entry_4.get().encode('utf-8'), surname=self.entry_5.get().encode('utf-8'), email=self.entry_6.get().encode('utf-8'), phone_number=self.entry_7.get().encode('utf-8'), home_address=self.entry_8.get().encode('utf-8'), position=self.entry_9.get().encode('utf-8'), ts=datetime.now())
+    mode = create_account(user_id=hashed_id(secrets.token_bytes(24)), user_name=self.entry_1.get().encode('utf-8'), password=self.entry_2.get().encode('utf-8'), roles=self.entry_3.get().encode('utf-8'), name=self.entry_4.get().encode('utf-8'), surname=self.entry_5.get().encode('utf-8'), email=self.entry_6.get().encode('utf-8'), phone_number=self.entry_7.get().encode('utf-8'), home_address=self.entry_8.get().encode('utf-8'), position=self.entry_9.get().encode('utf-8'), ts=datetime.now())
     if mode == "success":
       self.entry_1.delete(0, 'end')
       self.entry_2.delete(0, 'end')
